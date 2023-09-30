@@ -33,7 +33,7 @@ const AuthForm = () => {
     formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
-      name: "",
+      username: "",
       email: "",
       password: "",
     },
@@ -64,8 +64,8 @@ const AuthForm = () => {
         <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
           {variant === "REGISTER" && (
             <Input
-              id="name"
-              label="Name"
+              id="username"
+              label="Username"
               register={register}
               errors={errors}
               disabled={isLoading}

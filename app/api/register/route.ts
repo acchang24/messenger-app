@@ -6,9 +6,9 @@ import { NextResponse } from "next/server";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { email, name, password } = body;
+    const { email, username, password } = body;
 
-    if (!email || !name || !password) {
+    if (!email || !username || !password) {
       return new NextResponse("Missing info", { status: 400 });
     }
 
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     const user = await prisma.user.create({
       data: {
         email,
-        name,
+        username,
         hashedPassword,
       },
     });
