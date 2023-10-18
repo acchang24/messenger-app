@@ -58,8 +58,8 @@ const MessageBox = ({ data, isLast }: Props) => {
             <Image
               onClick={() => setImageModalOpen(true)}
               alt="Image"
-              height="288"
-              width="288"
+              height="300"
+              width="300"
               src={data.image}
               className="object-cover cursor-pointer hover:scale-110 transition translate"
             />
